@@ -72,6 +72,7 @@ console.log(b);
 
 let a2 = 10;
 let b2 = --a2;
+console.log(b2)
 
 // Postfix 
 //Whenever you are dealing with Post fix you you do the assignment first and after that you can do your increment or decrement
@@ -126,7 +127,7 @@ console.log(!isAStudent && hasMoney && !isOfDrinkingAge || hasMoney) //true && f
 // Store Alex's and Blake's scores in Math, Science, and History in variables.
 // Store Alex's and Blake's bonus points in variables.
 // Calculate the average score for both Alex and Blake using the formula:
-// Average Score  = Math + Science + History /3
+// AverageScore  = Math + Science + History /3
 
 
 // Calculate the final score for both Alex and Blake by adding their respective bonus points to their average score.
@@ -157,3 +158,58 @@ console.log('Blake final score is ', blakeFinalScore);
 //Determine if alex has a higer final score
 let alexHigherFinalScore = alexFinalScore > blakeFinalScore;
 console.log(alexHigherFinalScore)
+
+// STRINGS AND TEMPLATE LITERALS
+
+const myOccupation = 'Ballerina';
+const myName = 'sandra';
+const myYear = 1990;
+
+const finalSententce = "I'm" + ' ' + myName + ", a " + (2024 - myYear)
+    + " years old \n" + " and I'm a" + " " + myOccupation
+console.log(finalSententce)
+
+const finalSentence2 = `I'm ${myName} a  ${2024 - myYear} years old and i'm a ${myOccupation}`
+console.log(finalSentence2);
+console.log("string with \n multiple \n lines");
+console.log(`string
+    with 
+    new line`);
+
+// TYPE CONVERSION AND COERCION
+// Conversion
+const inputYear = "1996";
+console.log(inputYear, typeof (inputYear));
+
+const convertedInputYear = Number(inputYear);
+console.log(convertedInputYear, typeof (convertedInputYear));
+// unary
+const convertedInputYear2 = +inputYear;
+console.log(convertedInputYear2, typeof (convertedInputYear2));
+
+const inConvertableInput = 'somtoo';
+const myHobby = Number(inConvertableInput)
+console.log(myHobby, typeof (myHobby));
+
+const myLuckyNumber = 13;
+console.log(String(myLuckyNumber));
+
+// const myBoolean = 10;
+
+// TYpe coercion
+console.log("1" + 1)
+// when dealing with a string and a number and its plus sign , the number is converted to string and then concatenated to the string and the result is going to be a string
+// when dealing with a string and a number and its minus sign , the sting is converted to a number and then substracted to the number and the result is going to be a number
+
+let n = "1" + 1;
+console.log(n) //11 string
+console.log(2 + 5 + 6 + "5");
+console.log("10" + 10 * "3"); //1010 -3
+
+// BOOLEAN CONVERSIION & TRUTHY AND FALSEY VALUES
+// Falsely values that not exactly false but will return false when we try to convert them to boolean
+//Truthy values are values that are not exactly true but will return true when we try to convert then to boolean 
+//5 falsey values in js which 0 , "" , undefined, null , NaN and anything apart from these 5 values are truthy values 
+
+console.log(Boolean(0));
+console.log(Boolean('undefined'));

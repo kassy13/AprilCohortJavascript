@@ -213,3 +213,113 @@ console.log("10" + 10 * "3"); //1010 -3
 
 console.log(Boolean(0));
 console.log(Boolean('undefined'));
+
+// CONTROL STRUCTURES
+
+//IF ELSE STATEMENTS , SWITCH STATEMENTS
+
+//Syntax for if/else statements
+// if (condition that returns a boolean) {
+//     code that will run if the condition is true
+// }else {
+//     code that will run if the condition false
+// }
+
+const myAge = 19;
+
+if (myAge >= 18) {
+    console.log('I am eligible to drink');
+} else {
+    console.log('I am not yet eligible');
+}
+
+const isCold = false;
+let weather;
+if (isCold) {
+    weather = 'Its cold You should wear a sweater'
+} else {
+    weather = 'Its kind of hot'
+}
+console.log(weather)
+
+let character = "a"
+if (character) {
+    console.log('This is a character');
+} else {
+    console.log('This is not a character');
+}
+
+let drinkingAge = 18;
+let hasDriversLisence = false;
+if (myAge >= drinkingAge && !hasDriversLisence) {
+    console.log('I am a full blown adult')
+} else {
+    console.log("I am a minor")
+}
+
+//Syntax for if/else elseif statements
+// if (condition that returns a boolean) {
+//      code that will run if the condition is true
+// }
+// else if (condition that returns a boolean ) {
+//     code that will run if the condition is true
+// }
+// else {
+//      code that will run if the condition false
+// }
+const myPet = 'Dog';
+if (myPet === "Cat") {
+    console.log('Cats are great pets but not for me')
+} else if (myPet === 'Snake') {
+    console.log('Snakes are not for me')
+} else if (myPet === 'dog') {
+    console.log('Yes your are right my pet is a dog')
+}
+else {
+    console.log('I have no clue what your pet animal is')
+}
+
+// Coding Challenge: Basketball Tournament
+// Scenario:
+// There are two basketball teams, Eagles and Hawks. They compete against each other 3 times. The winner with the highest average score wins the championship!
+
+// Instructions:
+// Calculate the average score for each team using the test data below.
+
+// Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+// BONUS 1: Include a requirement for a minimum score of 120. With this rule, a team only wins if it has a higher score than the other team, and at the same time a score of at least 120 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks.
+
+// BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal to 120 points. Otherwise, no team wins the trophy.
+
+// Test Data:
+// Eagles score 123, 94, and 120. Hawks score 116, 130, and 105.
+
+// SOLUTION
+let eaglesScore1 = 153, eaglesScore2 = 154, eaglesScore3 = 120;
+let hawksScore1 = 153, hawksScore2 = 154, hawksScore3 = 120;
+
+let eaglesAverage = (eaglesScore1 + eaglesScore2 + eaglesScore3) / 3
+let hawksAverage = (hawksScore1 + hawksScore2 + hawksScore3) / 3
+console.log(`The eagles average is ${eaglesAverage}`)
+console.log(`The Hawks Average is ${hawksAverage}`);
+
+//Comparing the teams average scores
+if (eaglesAverage > hawksAverage) {
+    console.log(`Eagle win the championship 🏆 ${eaglesAverage}`)
+} else if (hawksAverage > eaglesAverage) {
+    console.log(`Hawks win the championship 🏆 ${hawksAverage}`)
+} else {
+    console.log("It's a draw")
+}
+
+// BONUS 1 
+if (eaglesAverage > hawksAverage && eaglesAverage >= 120) {
+    console.log(`Eagle win the championship 🏆 ${eaglesAverage}`)
+} else if (hawksAverage > eaglesAverage && hawksAverage >= 120) {
+    console.log(`Hawks win the championship 🏆 ${hawksAverage}`)
+} else if (eaglesAverage === hawksAverage && eaglesAverage >= 120 && hawksAverage >= 120) {
+    console.log("Its a draw")
+} else {
+    console.log('No team wins the championship')
+}

@@ -391,13 +391,13 @@ switch (day) {
         break;
     case "Tuesday":
     case "Thursday":
-    case "Friday": {
-
-        console.log("I go to classes");
-    }
+    case "Friday":
+        {
+            console.log("I go to classes");
+        }
         break;
     default: {
-        console.log('Invalid Day')
+        console.log("Invalid Day");
     }
 }
 
@@ -405,22 +405,22 @@ switch (day) {
 //synatx
 //condition ? code that will run if condition returns true : code that will run if condition returns false
 
-const isSunny = true
-isSunny ? console.log('Its a sunnyday') : console.log("Its not sunny")
+const isSunny = true;
+isSunny ? console.log("Its a sunnyday") : console.log("Its not sunny");
 
 let temperature;
 
-temperature = -5
+temperature = -5;
 if (temperature < 0) {
-    console.log('Its freezing cold')
+    console.log("Its freezing cold");
 } else if (temperature >= 0 && temperature <= 15) {
-    console.log("It's Quite chilly")
+    console.log("It's Quite chilly");
 } else if (temperature >= 16 && temperature <= 25) {
-    console.log("The weather is moderate")
+    console.log("The weather is moderate");
 } else if (temperature >= 26 && temperature <= 35) {
-    console.log("It's getting warm")
+    console.log("It's getting warm");
 } else if (temperature > 35) {
-    console.log("It's Extremely Hot")
+    console.log("It's Extremely Hot");
 }
 
 // Coding Challenge: Day Activity Planner
@@ -442,3 +442,115 @@ if (temperature < 0) {
 // day = "Saturday" and hour = 14
 // day = "Sunday" and hour = 20
 // day = "Friday" and hour = 18
+
+// SOLUTION
+let days, hour;
+days = "Tuesday";
+hour = 8;
+
+switch (days) {
+    case "Monday":
+    case "Tuesday":
+    case "Wednesday":
+    case "Thursday":
+    case "Friday":
+        console.log(hour < 9 || hour > 17 ? "Off work hours" : "work time");
+        break;
+    case 'Saturday':
+    case "Sunday":
+        console.log('Weekend! Relax or do something fun.');
+        break;
+    default:
+        console.log("Invalid day")
+}
+
+// NESTED IF ELSE STATEMENT
+// if (condition1) {
+//     // code to be executed if conition 1 is true
+//     if (condition2) {
+//         //code to be executed if condition 1 and condition2 is true
+//     } else {
+//         //code to be executed if condition 1 true and condition 2 is  false
+//     }
+// } else {
+//     //code to be executed if condition 1 is false
+//     if (condition3) {
+//         //code to be executed if condition 1 is false and condition3 is true
+//     } else {
+//         //code to be executed if condition 1 and condition 3  is  false
+//     }
+// }
+let yes = false
+let mainAge = 10
+if (mainAge < 13) {
+    if (yes) {
+        console.log("This Person is a toddler")
+    } else {
+        console.log("This person is a young child")
+    }
+
+} else {
+    console.log("This person is an adult")
+}
+
+//FUNCTIONS
+//Function Declaration
+//Function Expression
+//Arrow function
+//Anonymous functions
+//Asynchronous Functions
+//Immediately Invoked function Expression(IIFE)
+
+//syntax for function declaration 
+
+//function NameOfFunction (parameter) {
+//     //code or codes that will be executed when you use the function
+// }
+
+function logger() {
+    console.log('Hello cynthia')
+    console.log('its a beautiful morning or afternoon or evening')
+    return false
+}
+const nelog = logger();
+console.log(nelog)
+function avg(a, b, c) {
+    console.log('Hejcjdsjsd');
+    console.log('sdksjksksdljsdjk')
+    return (a + b + c) / 3
+
+}
+const result = avg(2, 4, 5);
+console.log(result)
+// Parameter
+
+function greet(name = 'Dear', time = 'Good Morning') {
+    console.log(`Hello ${name} , Good ${time}`)
+}
+greet('Cynthia', 'Morning')
+greet('Amara', "Night")
+greet()
+
+// Return
+function ageCalculator(birthYear, currentYear) {
+    console.log(2024 - birthYear)
+    return currentYear - birthYear
+
+
+}
+
+const myActualAge = ageCalculator(1990, 2024);
+console.log(myActualAge);
+if (myActualAge) {
+    console.log('ffufh')
+} else {
+    console.log('it is greater')
+}
+
+function greetName(name) {
+    const year = 2024
+    return `${name} graduated in ${year}`
+}
+const evaluation = greetName('James');
+console.log(evaluation)
+

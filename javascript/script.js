@@ -456,12 +456,12 @@ switch (days) {
     case "Friday":
         console.log(hour < 9 || hour > 17 ? "Off work hours" : "work time");
         break;
-    case 'Saturday':
+    case "Saturday":
     case "Sunday":
-        console.log('Weekend! Relax or do something fun.');
+        console.log("Weekend! Relax or do something fun.");
         break;
     default:
-        console.log("Invalid day")
+        console.log("Invalid day");
 }
 
 // NESTED IF ELSE STATEMENT
@@ -480,17 +480,16 @@ switch (days) {
 //         //code to be executed if condition 1 and condition 3  is  false
 //     }
 // }
-let yes = false
-let mainAge = 10
+let yes = false;
+let mainAge = 10;
 if (mainAge < 13) {
     if (yes) {
-        console.log("This Person is a toddler")
+        console.log("This Person is a toddler");
     } else {
-        console.log("This person is a young child")
+        console.log("This person is a young child");
     }
-
 } else {
-    console.log("This person is an adult")
+    console.log("This person is an adult");
 }
 
 //FUNCTIONS
@@ -498,59 +497,115 @@ if (mainAge < 13) {
 //Function Expression
 //Arrow function
 //Anonymous functions
-//Asynchronous Functions
+//Asynchronous Functions // Till Apis
 //Immediately Invoked function Expression(IIFE)
 
-//syntax for function declaration 
+//syntax for function declaration
 
 //function NameOfFunction (parameter) {
 //     //code or codes that will be executed when you use the function
 // }
 
 function logger() {
-    console.log('Hello cynthia')
-    console.log('its a beautiful morning or afternoon or evening')
-    return false
+    console.log("Hello cynthia");
+    console.log("its a beautiful morning or afternoon or evening");
+    // return false
 }
-const nelog = logger();
-console.log(nelog)
-function avg(a, b, c) {
-    console.log('Hejcjdsjsd');
-    console.log('sdksjksksdljsdjk')
-    return (a + b + c) / 3
+// const nelog = logger();
+// console.log(nelog)
+// function avg(a, b, c) {
+//     console.log('Hejcjdsjsd');
+//     console.log('sdksjksksdljsdjk')
+//     return (a + b + c) / 3
 
-}
-const result = avg(2, 4, 5);
-console.log(result)
+// }
+// const result = avg(2, 4, 5);
+// console.log(result)
 // Parameter
 
-function greet(name = 'Dear', time = 'Good Morning') {
-    console.log(`Hello ${name} , Good ${time}`)
+function greet(name = "Dear", time = "Good Morning") {
+    console.log(`Hello ${name} , Good ${time}`);
 }
-greet('Cynthia', 'Morning')
-greet('Amara', "Night")
-greet()
+greet("Cynthia", "Morning");
+greet("Amara", "Night");
+greet();
 
 // Return
 function ageCalculator(birthYear, currentYear) {
-    console.log(2024 - birthYear)
-    return currentYear - birthYear
-
-
+    console.log(2024 - birthYear);
+    // return currentYear - birthYear
 }
 
 const myActualAge = ageCalculator(1990, 2024);
 console.log(myActualAge);
 if (myActualAge) {
-    console.log('ffufh')
+    console.log("ffufh");
 } else {
-    console.log('it is greater')
+    console.log("it is greater");
 }
 
 function greetName(name) {
-    const year = 2024
-    return `${name} graduated in ${year}`
+    const year = 2024;
+    return `${name} graduated in ${year}`;
 }
-const evaluation = greetName('James');
-console.log(evaluation)
+const evaluation = greetName("James");
+console.log(evaluation);
 
+console.log(checkNumber(5));
+function checkNumber(num) {
+    if (num > 0) {
+        return "positive";
+    }
+    if (num < 0) {
+        return "Negative";
+    }
+    return "Zero";
+}
+console.log(checkNumber(5));
+console.log(checkNumber(-3));
+console.log(checkNumber(0));
+
+// Function Expressions
+//syntax
+// const/let NameOfVariable = function (parameter ) {
+//code to be executed when the function is called or invoked or executed
+// }
+
+const ageCalculator2 = function (birthYear) {
+    return 2024 - birthYear;
+};
+
+console.log(ageCalculator2(2020));
+const returnedAge = ageCalculator2(2020);
+console.log(returnedAge);
+
+// Arrow Functions
+//syntax
+// const / let nameOfVariable = (parameter) => {
+//Code to be executed when the function is called
+// }
+const arrow = (a, b) => {
+    console.log("jdjdhh");
+    return a + b;
+};
+console.log(arrow(2, 5));
+// NOTE : WILL TREAT THE THIS KEYWORD WHEN WE TREAT OBJECT
+
+// Anonymous FUnctions
+setTimeout(function () {
+    console.log("This is an Anonymous Function");
+}, 5000);
+
+const headerTag = document.querySelector(".h1");
+headerTag.addEventListener("click", () => {
+    headerTag.style.color = "red";
+});
+
+// Immediately Invoked Function expressions
+// (function () {
+// // code that you want to execute once
+// })()
+// Reason : This grouping is necessary to ensure that the JavaScript parser interprets it as a function expression rather than a function declaration
+(function (name) {
+    console.log(`Hello , ${name} `)
+})('obi')

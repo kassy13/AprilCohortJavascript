@@ -588,6 +588,7 @@ const arrow = (a, b) => {
     console.log("jdjdhh");
     return a + b;
 };
+
 console.log(arrow(2, 5));
 // NOTE : WILL TREAT THE THIS KEYWORD WHEN WE TREAT OBJECT
 
@@ -609,3 +610,51 @@ headerTag.addEventListener("click", () => {
 (function (name) {
     console.log(`Hello , ${name} `)
 })('obi')
+
+
+
+// You are enhancing your geometry calculator to ensure it handles invalid inputs properly. You will modify the functions to include validation using if-else statements. Each function will check if the provided dimensions are valid (positive numbers). If the dimensions are invalid, the function should return an error message instead of performing the calculation.
+
+// Task:
+// Define a function calculateRectangleArea that takes two parameters: width and height.
+
+// If width or height is less than or equal to 0, return the message: "Invalid dimensions! Width and height must be positive numbers."
+// Otherwise, calculate the area of the rectangle using the formula width * height and return the result.
+// Define a function calculateTriangleArea that takes two parameters: base and height.
+
+// If base or height is less than or equal to 0, return the message: "Invalid dimensions! Base and height must be positive numbers."
+// Otherwise, calculate the area of the triangle using the formula (base * height) / 2 and return the result.
+// Define a function calculateCircleArea that takes one parameter: radius.
+
+// If radius is less than or equal to 0, return the message: "Invalid radius! Radius must be a positive number."
+// Otherwise, calculate the area of the circle using the formula Math.PI * radius * radius and return the result.
+// Call each function with valid and invalid arguments to test the validation logic. Store the results in variables rectangleArea, triangleArea, and circleArea.
+
+// Print the results of each calculation to the console, including cases where the inputs are invalid.
+
+
+//SOLUTIONS
+const calculateRectangleArea = function (width, height) {
+    if (width <= 0 || height <= 0) {
+        return "Invalid dimensions! Width and height must be positive numbers."
+    } else {
+        return width * height
+    }
+}
+const calculateTriangleArea = function (base, height) {
+    if (base <= 0 || height <= 0) {
+        return "Invalid radius! Radius must be a positive number."
+    } else {
+        return (base * height) / 2
+    }
+}
+const calculateCircleArea = function (radius) {
+    if (radius <= 0) {
+        return "Invalid radius! Radius must be a positive number."
+    } else {
+        return Math.PI * radius * radius
+    }
+}
+
+// Testing the function with different values
+console.log(calculateRectangleArea(-6, 11))

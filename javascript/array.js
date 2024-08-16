@@ -142,3 +142,16 @@ console.log(obj)
 
 // MATH METHODS
 console.log(Math.abs(-5));
+
+// JavaScript Assignment: Basic Operations with Methods, Objects, this, and Arrays
+// Objective:
+// To practice creating and using methods within objects.
+// To understand the this keyword in the context of object methods.
+// Instructions:
+// Create a Simple JavaScript Object:
+// Create an object called library that represents a small book library.
+// The library object should have the following properties:
+// books: An array that contains strings representing book titles.
+// addBook: A method that adds a new book title to the books array. Use the this keyword to refer to the books array.
+// removeLastBook: A method that removes the last book from the books array. Use the this keyword to access and modify the books array.
+// listBooks: A method that logs all the book titles in the library at once, without using loops.

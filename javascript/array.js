@@ -1,4 +1,4 @@
-"use strict"
+// "use strict"
 // const friend1 = 'john bosco'; 
 // const friend2 = 'chukwuemeka';
 // const friend3 = 'chidimma';
@@ -83,4 +83,62 @@ console.log(studentObject['firstName']);
 
 // HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 
-/*
+// SOLUTION
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+const bills = [125, 555, 44]
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log('bills', bills);
+console.log('tips', tips)
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(total)
+
+
+// This Keyword
+
+console.log(this);
+
+function hello() {
+    console.log(this)
+}
+hello()
+
+const person = {
+    name: 'somtoo',
+    // greet: function () {
+    //     console.log(this)
+    // },
+    hello2: hello
+}
+console.log('person object')
+person.hello2()
+
+
+
+const person2 = {
+    name: 'Alice',
+    hello2: hello,
+    arrow: function () {
+        const inner = () => {
+            console.log(this)
+        }
+        inner()
+    }
+}
+person2.arrow();
+
+// OBJECT METHODS
+console.log(Object.keys(person2));
+console.log(Object.values(person2));
+console.log(Object.entries(person2));
+const result = Object.assign(person, person2)
+console.log(result);
+const obj = { a: 1 }
+Object.freeze(obj)
+obj.a = 2
+console.log(obj)
+
+// MATH METHODS
+console.log(Math.abs(-5));

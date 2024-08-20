@@ -142,6 +142,13 @@ console.log(obj)
 
 // MATH METHODS
 console.log(Math.abs(-5));
+console.log(Math.ceil(4.2));
+console.log(Math.floor(4.2));
+console.log(Math.round(4.2));
+console.log(Math.max(4, 2, 3, 1));
+console.log(Math.pow(4, 2));
+console.log(Math.random() * 20);
+console.log(Math.trunc(4.8));
 
 // JavaScript Assignment: Basic Operations with Methods, Objects, this, and Arrays
 // Objective:
@@ -155,3 +162,93 @@ console.log(Math.abs(-5));
 // addBook: A method that adds a new book title to the books array. Use the this keyword to refer to the books array.
 // removeLastBook: A method that removes the last book from the books array. Use the this keyword to access and modify the books array.
 // listBooks: A method that logs all the book titles in the library at once, without using loops.
+
+// console.log('loop')
+// console.log('loop')
+// console.log('loop')
+// console.log('loop')
+// console.log('loop')
+// console.log('loop')
+
+// FOR LOOP
+// syntax 
+// for (initilization; condtition; increment / decrement) {
+
+// }
+
+for (let i = 0; i < 5; i++) {
+    console.log('loop', i);
+}
+for (let i = 10; i > 0; i--) {
+    console.log('loop', i);
+}
+
+//WHILE LOOP SYNTAX
+//initialization
+// while (condtion) {
+//     //Code to be executed
+// increment / decrement
+// } 
+
+let j = 0;
+while (j < 5) {
+    console.log('while loop', j);
+    j++
+}
+
+// DO-while Syntax
+//initialization
+// do {
+//     //code to be executed
+// }while(condition)
+
+// let k = 0;
+// do {
+//     console.log('do while', k);
+//         k++
+// } while (k < 1)
+
+let k = 0;
+do {
+    console.log('do while', k);
+    k++
+} while (k < 4);
+
+// syntax For In loops
+// for (variablename in name of object) {
+//     //code to be executed for each property
+// }
+
+const mainObj = {
+    name: 'john', age: 30, job: 'singer', hobby: 'Travelling'
+}
+for (let inLoop in mainObj) {
+    console.log('hello');
+    console.log(inLoop);
+
+    // console.log('hello', mainObj[inLoop]);
+}
+// For of loop
+// syntax For of loops
+// for (variablename of name of iterable eg array or string) {
+//     //code to be executed for each property
+// }
+const numarr = [5, 2, 3, 4, 6, 'hello'];
+for (let ofLoop of numarr) {
+    console.log(ofLoop + 10);
+}
+
+//Syntax FOR EACH METHOD
+// Arrayname.forEach(function (currentValue, index, array) {
+//     //code to be execured for each element
+// })
+
+const colors = ['red', 'blue', 'green']
+colors.forEach(function (color, index, arr) {
+    console.log(color, index + 1);
+    console.log(arr);
+})
+const dogs = ['chihuaha', 'german shephard', 'ekuke'];
+dogs.forEach(function (_, index) {
+    console.log(index);
+});

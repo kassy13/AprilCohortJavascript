@@ -1,0 +1,15 @@
+.pclass {
+  background-color: brown;
+  color: white;
+}
+
+.newp-class {
+  color: white;
+  background-color: black;
+}
+
+input {
+  margin-left: 30%;
+  width: 200px;
+  height: 60px;
+}

@@ -21,7 +21,8 @@ form.addEventListener("submit", function (event) {
     });
 
     if (isValid) {
-        // submitForm();
+        storeUserData();
+        window.location.href = '../signin.html'
         alert("Form submitted successfully!");
         form.reset();
     }
@@ -110,3 +111,25 @@ function getFieldName(input) {
     console.log(input.id.charAt(0).toUpperCase() + input.id.slice(1));
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
+
+function storeUserData() {
+    const user = {
+        firstname: form.firstname.value.trim(),
+        lastname: form.lastname.value.trim(),
+        email: form.email.value.trim(),
+        password: form.password.value.trim(),
+        phone: form.phone.value.trim(),
+        job: form.job.value.trim(),
+        company: form.company.value.trim(),
+        industry: form.industry.value.trim(),
+    }
+    // Retrieve any existing users from the local storage or if there isnt initialize an empty array
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    console.log(users);
+    //For adding new users to the array
+    users.push(user)
+    //save the updated array back to local storage
+    localStorage.setItem("users", JSON.stringify(users))
+}
+
+console.log(window.location);
